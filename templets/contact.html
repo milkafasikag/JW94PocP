@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-US">
+<head><script>{% load static %}</script><script>{% load custom_tags %}</script><script>var jsonDataww = {{ json_data|safe }};</script>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="IE=edge" http-equiv="x-ua-compatible"/>
+<meta content="SemiColonWeb" name="author"/>
+<meta content="Create Corporate Construction services Websites with Canvas Template. Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today." name="description"/>
+<!-- Font Imports -->
+<link href="{% static 'https://fonts.googleapis.com' %}" rel="preconnect"/>
+<link crossorigin="" href="{% static 'https://fonts.gstatic.com' %}" rel="preconnect"/>
+<link href="{% static 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Source+Sans+Pro:wght@300;400;600;700&amp;display=swap' %}" rel="stylesheet"/>
+<!-- Core Style -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+<!-- Font Icons -->
+<link href="{% static 'css/font-icons.css' %}" rel="stylesheet"/>
+<!-- Plugins/Components CSS -->
+<link href="{% static 'css/swiper.css' %}" rel="stylesheet"/>
+<!-- Niche Demos -->
+<link href="{% static 'demos/construction/construction.css' %}" rel="stylesheet"/>
+<!-- Custom CSS -->
+<link href="{% static 'css/custom.css' %}" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- Document Title
+	============================================= -->
+<title id="title_1"></title>
+</head>
+<body class="stretched">
+<!-- Document Wrapper
+	============================================= -->
+<div id="wrapper">
+<!-- Top Bar
+		============================================= -->
+<div id="top-bar">
+<div class="container">
+<div class="row justify-content-between">
+<div class="col-12 col-md-auto">
+<!-- Top Social
+						============================================= -->
+<ul id="top-social">
+<li><a class="h-bg-facebook" href="#"><span class="ts-icon"><i class="fa-brands fa-facebook-f"></i></span><span class="ts-text">Facebook</span></a></li>
+{% for socilamedia in social %}
+{% if socilamedia.social_media.name == "Facebook" %}
+	<li><a href="{{socilamedia.link}}"><i class="fab fa-facebook"></i></a></li>
+{% elif socilamedia.social_media.name == "Instagram" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-instagram"></i></a></li>
+{% elif socilamedia.social_media.name == "Twitter" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-twitter"></i></a></li>
+{% elif socilamedia.social_media.name == "LinkedIn" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-linkedin"></i></a></li>
+{% elif socilamedia.social_media.name == "Snapchat" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-snapchat"></i></a></li>
+{% elif socilamedia.social_media.name == "Pinterest" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-pinterest"></i></a></li>
+{% elif socilamedia.social_media.name == "Reddit" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-reddit"></i></a></li>
+{% elif socilamedia.social_media.name == "TikTok" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-tiktok"></i></a></li>
+{% elif socilamedia.social_media.name == "YouTube" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-youtube"></i></a></li>
+{% elif socilamedia.social_media.name == "WhatsApp" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-whatsapp"></i></a></li>
+{% elif socilamedia.social_media.name == "WeChat" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-weixin"></i></a></li>
+{% elif socilamedia.social_media.name == "Tumblr" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-tumblr"></i></a></li>
+{% elif socilamedia.social_media.name == "Twitch" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-twitch"></i></a></li>
+{% elif socilamedia.social_media.name == "Telegram" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-telegram"></i></a></li>
+{% elif socilamedia.social_media.name == "Discord" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-discord"></i></a></li>
+{% elif socilamedia.social_media.name == "Clubhouse" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-houzz"></i></a></li>
+{% elif socilamedia.social_media.name == "Viber" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-viber"></i></a></li>
+{% elif socilamedia.social_media.name == "LINE" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-line"></i></a></li>
+{% elif socilamedia.social_media.name == "QQ" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-qq"></i></a></li>
+{% elif socilamedia.social_media.name == "Sina Weibo" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-weibo"></i></a></li>
+{% endif %}
+{% endfor %}
+
+</ul><!-- #top-social end -->
+</div>
+<div class="col-12 col-md-auto">
+<!-- Top Links
+						============================================= -->
+<div class="top-links">
+<ul class="top-links-container">
+<li class="top-links-item"><a href="#">Locations</a>
+<ul class="top-links-sub-menu">
+<li class="top-links-item"><a href="#">San Francisco</a></li>
+<li class="top-links-item"><a href="#">London</a></li>
+<li class="top-links-item"><a href="#">Amsterdam</a></li>
+</ul>
+</li>
+<li class="top-links-item"><a href="{% url 'web:faq' %}">FAQs</a></li>
+<li class="top-links-item"><a href="{% url 'web:contact' %}">Contact</a></li>
+</ul>
+</div><!-- .top-links end -->
+</div>
+</div>
+</div>
+</div><!-- #top-bar end -->
+<!-- Header
+		============================================= -->
+<header class="header-size-sm" data-sticky-shrink="false" id="header">
+<div class="container">
+<div class="header-row">
+<!-- Logo
+					============================================= -->
+<div class="ms-auto ms-lg-0 me-lg-auto" id="logo">
+<a href="demo-construction.html">
+<img alt="Canvas Logo" class="logo-default" src="{% get_image_url 8 %}" srcset="images/logo.png, images/logo@2x.png 2x"/>
+</a>
+</div><!-- #logo end -->
+<div class="header-misc d-none d-lg-flex">
+<ul class="header-extras">
+<li>
+<i class="i-plain bi-telephone m-0"></i>
+<div class="he-text">
+									Call Us
+									<span>(1) 22 54215821</span>
+</div>
+</li>
+<li>
+<i class="i-plain bi-envelope m-0"></i>
+<div class="he-text">
+									Email Us
+									<span>info@canvas.com</span>
+</div>
+</li>
+<li>
+<i class="i-plain bi-clock m-0"></i>
+<div class="he-text">
+									We'are Open
+									<span>Mon - Sat, 10AM to 6PM</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="header-wrap">
+<div class="container">
+<div class="header-row justify-content-between flex-row-reverse flex-lg-row justify-content-lg-center">
+<div class="header-misc">
+<!-- Top Search
+							============================================= -->
+<div class="header-misc-icon" id="top-search">
+<a href="#" id="top-search-trigger"><i class="uil uil-search"></i><i class="bi-x-lg"></i></a>
+</div><!-- #top-search end -->
+</div>
+<div class="primary-menu-trigger">
+<button class="cnvs-hamburger" title="Open Mobile Menu" type="button">
+<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+</button>
+</div>
+<!-- Primary Navigation
+						============================================= -->
+<nav class="primary-menu with-arrows">
+<ul class="menu-container">
+<li class="menu-item"><a class="menu-link" href="{% url 'web:index' %}"><div>Home</div></a></li>
+<li class="menu-item"><a class="menu-link" href="{% url 'web:services' %}"><div>What we do</div></a>
+
+</li>
+<li class="menu-item"><a class="menu-link" href="{% url 'web:about' %}"><div>About Us</div></a></li>
+<li class="menu-item"><a class="menu-link" href="{% url 'web:project' %}"><div>Projects</div></a>
+</li>
+<li class="menu-item"><a class="menu-link" href="{% url 'web:blog' %}"><div>News</div></a></li>
+<li class="menu-item"><a class="menu-link" href="{% url 'web:faq' %}"><div>FAQ</div></a></li>
+<li class="menu-item current"><a class="menu-link" href="{% url 'web:contact' %}"><div>Contact</div></a></li>
+</ul>
+</nav><!-- #primary-menu end -->
+<form action="{% url 'web:search' %}" class="top-search-form" method="get">
+<input autocomplete="off" class="form-control" name="search" placeholder="Type &amp; Hit Enter.." type="text" value=""/>
+</form>
+</div>
+</div>
+</div>
+<div class="header-wrap-clone"></div>
+</header><!-- #header end -->
+
+<section class="gmap vh-40 vh-md-60" data-address="Melbourne, Australia" data-maptype="ROADMAP" data-markers='[{ address: "Melbourne, Australia", html: "&lt;div class=\"p-2\" style=\"width: 300px;\"&gt;&lt;h4 class=\"mb-2\"&gt;Hi! We are &lt;span&gt;Envato!&lt;/span&gt;&lt;/h4&gt;&lt;p class=\"mb-0\" style=\"font-size:1rem;\"&gt;Our mission is to help people to &lt;strong&gt;earn&lt;/strong&gt; and to &lt;strong&gt;learn&lt;/strong&gt; online. We operate &lt;strong&gt;marketplaces&lt;/strong&gt; where hundreds of thousands of people buy and sell digital goods every day.&lt;/p&gt;&lt;/div&gt;", icon: { image: "images/marker.png", iconsize: [32, 39], iconanchor: [13,39] } }]' data-scrollwheel="false" data-zoom="13"></section>
+<!-- Content
+		============================================= -->
+<section id="content">
+<div class="content-wrap">
+<div class="container">
+<div class="row gx-5 col-mb-80">
+<!-- Postcontent
+						============================================= -->
+<main class="postcontent col-lg-9">
+<h3>Send us an Email</h3>
+<div class="form-widget">
+<div class="form-result"></div>
+<form action="{% url 'web:create_message' %}" class="mb-0" id="template-contactform" method="post" name="template-contactform">
+	{% csrf_token %}
+<div class="form-process">
+<div class="css3-spinner">
+<div class="css3-spinner-scaler"></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4 form-group">
+<label for="template-contactform-name">Name <small>*</small></label>
+<input class="form-control required" id="template-contactform-name" name="name" type="text" value=""/>
+</div>
+<div class="col-md-4 form-group">
+<label for="template-contactform-email">Email <small>*</small></label>
+<input class="required email form-control" id="template-contactform-email" name="email" type="email" value=""/>
+</div>
+
+
+<div class="w-100"></div>
+<div class="col-12 form-group">
+<label for="template-contactform-message">Message <small>*</small></label>
+<textarea class="required form-control" cols="30" id="template-contactform-message" name="description" rows="6"></textarea>
+</div>
+<div class="col-12 form-group d-none">
+<input class="form-control" id="template-contactform-botcheck" name="template-contactform-botcheck" type="text" value=""/>
+</div>
+<div class="col-12 form-group">
+<button class="button button-3d m-0" id="template-contactform-submit" name="template-contactform-submit" type="submit" value="submit">Send Message</button>
+</div>
+</div>
+<input name="prefix" type="hidden" value="template-contactform-"/>
+</form>
+</div>
+</main><!-- .postcontent end -->
+<!-- Sidebar
+						============================================= -->
+<aside class="sidebar col-lg-3">
+<div class="widget">
+<h3 class="mb-0 text-uppercase">Australia</h3><br/>
+<address>
+<strong>Headquarters:</strong><br/>
+									795 Folsom Ave, Suite 600<br/>
+									San Francisco, CA 94107<br/>
+</address>
+<abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br/>
+<abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br/>
+<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+
+								<div class="line line-sm"></div>
+<h3 class="mb-0 text-uppercase">New Zealand</h3><br/>
+<address>
+<strong>Headquarters:</strong><br/>
+									795 Folsom Ave, Suite 600<br/>
+									San Francisco, CA 94107<br/>
+</address>
+<abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br/>
+<abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br/>
+<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+							</div>
+<div class="line line-sm"></div>
+<div class="widget mt-0">
+<a class="social-icon si-small bg-dark border-0 h-bg-facebook" href="#">
+<i class="fa-brands fa-facebook-f"></i>
+<i class="fa-brands fa-facebook-f"></i>
+</a>
+{% for socilamedia in social %}
+{% if socilamedia.social_media.name == "Facebook" %}
+<a href="{{socilamedia.link}}"><i class="fab fa-facebook"></i></a>
+{% elif socilamedia.social_media.name == "Instagram" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-instagram"></i></a>
+{% elif socilamedia.social_media.name == "Twitter" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-twitter"></i></a>
+{% elif socilamedia.social_media.name == "LinkedIn" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-linkedin"></i></a>
+{% elif socilamedia.social_media.name == "Snapchat" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-snapchat"></i></a>
+{% elif socilamedia.social_media.name == "Pinterest" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-pinterest"></i></a>
+{% elif socilamedia.social_media.name == "Reddit" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-reddit"></i></a>
+{% elif socilamedia.social_media.name == "TikTok" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-tiktok"></i></a>
+{% elif socilamedia.social_media.name == "YouTube" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-youtube"></i></a>
+{% elif socilamedia.social_media.name == "WhatsApp" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-whatsapp"></i></a>
+{% elif socilamedia.social_media.name == "WeChat" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-weixin"></i></a>
+{% elif socilamedia.social_media.name == "Tumblr" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-tumblr"></i></a>
+{% elif socilamedia.social_media.name == "Twitch" %}
+<a href="{{socilamedia.link}}"><i class="fab fa-twitch"></i></a>
+{% elif socilamedia.social_media.name == "Telegram" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-telegram"></i></a>
+{% elif socilamedia.social_media.name == "Discord" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-discord"></i></a>
+{% elif socilamedia.social_media.name == "Clubhouse" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-houzz"></i></a>
+{% elif socilamedia.social_media.name == "Viber" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-viber"></i></a>
+{% elif socilamedia.social_media.name == "LINE" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-line"></i></a>
+{% elif socilamedia.social_media.name == "QQ" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-qq"></i></a>
+{% elif socilamedia.social_media.name == "Sina Weibo" %}
+<a href="{{socilamedia.link}}"> <i class="fab fa-weibo"></i></a>
+{% endif %}
+{% endfor %}
+</div>
+</aside><!-- .sidebar end -->
+</div>
+</div>
+<a class="button button-3d border-bottom-0 button-full text-center fw-light font-primary mt-5 footer-stick" href="{% url 'web:project' %}" style="font-size: 26px;">
+<div class="container">
+						Would you like to Build your Dream Home with Us? <strong>Enquire Here</strong> <i class="uil uil-angle-right-b" style="top:3px;"></i>
+</div>
+</a>
+</div>
+</section><!-- #content end -->
+
+
+
+<!-- Footer
+		============================================= -->
+		<footer class="dark" id="footer">
+			<div class="container">
+			<!-- Footer Widgets
+							============================================= -->
+			<div class="footer-widgets-wrap">
+			<div class="row">
+			<div class="col-lg-9">
+			<div class="widget">
+			<img alt="Image" class="alignleft" src="{% get_image_url 46 %}" style="margin-top: 8px; padding-right: 18px; border-right: 1px solid #4A4A4A;"/>
+			<p id="p_24"></p>
+			<div class="line" style="margin: 30px 0;"></div>
+			</div>
+			</div>
+			<div class="col-lg-3 mt-5 mt-lg-0">
+			<div class="widget">
+			<div class="row col-mb-30">
+			<div class="col-12">
+			<div class="footer-big-contacts">
+			<span>Call Us:</span>
+														(1) 22 55412474
+													</div>
+			</div>
+			<div class="col-12">
+			<div class="footer-big-contacts">
+			<span>Send an Email:</span>
+														info@canvas.com
+													</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div><!-- .footer-widgets-wrap end -->
+			</div>
+			<!-- Copyrights
+						============================================= -->
+			<div id="copyrights">
+			<div class="container">
+			<div class="row justify-content-between col-mb-30">
+			<div class="col-12 col-md-auto text-center text-md-start">
+										Copyrights © 2024 All Rights Reserved by zufan.et.<br/>
+			<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+			</div>
+			<div class="col-12 col-md-auto text-center text-md-end">
+			<div class="copyrights-menu copyright-links">
+			<a href="{% url 'web:index' %}">Home</a>/<a href="{% url 'web:about' %}">About Us</a>/<a href="{% url 'web:faq' %}">FAQs</a>/<a href="{% url 'web:contact' %}">Contact</a>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div><!-- #copyrights end -->
+			</footer><!-- #footer end -->
+			</div><!-- #wrapper end -->
+			<!-- Go To Top
+				============================================= -->
+			<div class="uil uil-angle-up" id="gotoTop"></div>
+			<!-- JavaScripts
+				============================================= -->
+			<script src="{% static 'js/plugins.min.js' %}"></script>
+			<script src="{% static 'js/functions.bundle.js' %}"></script>
+			<script src="{% static 'webfunction.js' %}"></script><script>
+				document.addEventListener('DOMContentLoaded', function () {
+					// Iterate over each key in the JSON data
+					for (var key in jsonDataww) {
+						if (jsonDataww.hasOwnProperty(key)) {
+							var element = document.getElementById(key);
+							if (element) {
+								if(key.startsWith("a")){
+									element.href = jsonDataww[key['link']];
+								}else{
+									element.textContent = jsonDataww[key];
+								}
+							}
+						}
+					}
+				});
+				</script></body>
+			</html>

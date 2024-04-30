@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-US">
+<head><script>{% load static %}</script><script>{% load custom_tags %}</script><script>var jsonDataww = {{ json_data|safe }};</script>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="IE=edge" http-equiv="x-ua-compatible"/>
+<meta content="SemiColonWeb" name="author"/>
+<meta content="Create Corporate Construction services Websites with Canvas Template. Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today." name="description"/>
+<!-- Font Imports -->
+<link href="{% static 'https://fonts.googleapis.com' %}" rel="preconnect"/>
+<link crossorigin="" href="{% static 'https://fonts.gstatic.com' %}" rel="preconnect"/>
+<link href="{% static 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Source+Sans+Pro:wght@300;400;600;700&amp;display=swap' %}" rel="stylesheet"/>
+<!-- Core Style -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+<!-- Font Icons -->
+<link href="{% static 'css/font-icons.css' %}" rel="stylesheet"/>
+<!-- Plugins/Components CSS -->
+<link href="{% static 'css/swiper.css' %}" rel="stylesheet"/>
+<!-- Niche Demos -->
+<link href="{% static 'demos/construction/construction.css' %}" rel="stylesheet"/>
+<!-- Custom CSS -->
+<link href="{% static 'css/custom.css' %}" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- Document Title
+	============================================= -->
+<title id="title_1"></title>
+</head>
+<body class="stretched">
+<!-- Document Wrapper
+	============================================= -->
+<div id="wrapper">
+<!-- Top Bar
+		============================================= -->
+<div id="top-bar">
+<div class="container">
+<div class="row justify-content-between">
+<div class="col-12 col-md-auto">
+<!-- Top Social
+						============================================= -->
+<ul id="top-social">
+<li><a class="h-bg-facebook" href="#"><span class="ts-icon"><i class="fa-brands fa-facebook-f"></i></span><span class="ts-text">Facebook</span></a></li>
+{% for socilamedia in social %}
+{% if socilamedia.social_media.name == "Facebook" %}
+	<li><a href="{{socilamedia.link}}"><i class="fab fa-facebook"></i></a></li>
+{% elif socilamedia.social_media.name == "Instagram" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-instagram"></i></a></li>
+{% elif socilamedia.social_media.name == "Twitter" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-twitter"></i></a></li>
+{% elif socilamedia.social_media.name == "LinkedIn" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-linkedin"></i></a></li>
+{% elif socilamedia.social_media.name == "Snapchat" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-snapchat"></i></a></li>
+{% elif socilamedia.social_media.name == "Pinterest" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-pinterest"></i></a></li>
+{% elif socilamedia.social_media.name == "Reddit" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-reddit"></i></a></li>
+{% elif socilamedia.social_media.name == "TikTok" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-tiktok"></i></a></li>
+{% elif socilamedia.social_media.name == "YouTube" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-youtube"></i></a></li>
+{% elif socilamedia.social_media.name == "WhatsApp" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-whatsapp"></i></a></li>
+{% elif socilamedia.social_media.name == "WeChat" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-weixin"></i></a></li>
+{% elif socilamedia.social_media.name == "Tumblr" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-tumblr"></i></a></li>
+{% elif socilamedia.social_media.name == "Twitch" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-twitch"></i></a></li>
+{% elif socilamedia.social_media.name == "Telegram" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-telegram"></i></a></li>
+{% elif socilamedia.social_media.name == "Discord" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-discord"></i></a></li>
+{% elif socilamedia.social_media.name == "Clubhouse" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-houzz"></i></a></li>
+{% elif socilamedia.social_media.name == "Viber" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-viber"></i></a></li>
+{% elif socilamedia.social_media.name == "LINE" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-line"></i></a></li>
+{% elif socilamedia.social_media.name == "QQ" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-qq"></i></a></li>
+{% elif socilamedia.social_media.name == "Sina Weibo" %}
+	<li><a href="{{socilamedia.link}}"> <i class="fab fa-weibo"></i></a></li>
+{% endif %}
+{% endfor %}
+
+</ul><!-- #top-social end -->
+</div>
+<div class="col-12 col-md-auto">
+<!-- Top Links
+						============================================= -->
+<div class="top-links">
+<ul class="top-links-container">
+<li class="top-links-item"><a href="#">Locations</a>
+<ul class="top-links-sub-menu">
+<li class="top-links-item"><a href="#">San Francisco</a></li>
+<li class="top-links-item"><a href="#">London</a></li>
+<li class="top-links-item"><a href="#">Amsterdam</a></li>
+</ul>
+</li>
+<li class="top-links-item"><a href="{% url 'web:faq' %}">FAQs</a></li>
+<li class="top-links-item"><a href="{% url 'web:contact' %}">Contact</a></li>
+</ul>
+</div><!-- .top-links end -->
+</div>
+</div>
+</div>
+</div><!-- #top-bar end -->
+<!-- Header
+		============================================= -->
+<header class="header-size-sm" data-sticky-shrink="false" id="header">
+<div class="container">
+<div class="header-row">
+<!-- Logo
+					============================================= -->
+<div class="ms-auto ms-lg-0 me-lg-auto" id="logo">
+<a href="demo-construction.html">
+<img alt="Canvas Logo" class="logo-default" src="{% get_image_url 8 %}" srcset="images/logo.png, images/logo@2x.png 2x"/>
+</a>
+</div><!-- #logo end -->
+<div class="header-misc d-none d-lg-flex">
+<ul class="header-extras">
+<li>
+<i class="i-plain bi-telephone m-0"></i>
+<div class="he-text">
+									Call Us
+									<span>(1) 22 54215821</span>
+</div>
+</li>
+<li>
+<i class="i-plain bi-envelope m-0"></i>
+<div class="he-text">
+									Email Us
+									<span>info@canvas.com</span>
+</div>
+</li>
+<li>
+<i class="i-plain bi-clock m-0"></i>
+<div class="he-text">
+									We'are Open
+									<span>Mon - Sat, 10AM to 6PM</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="header-wrap">
+<div class="container">
+<div class="header-row justify-content-between flex-row-reverse flex-lg-row justify-content-lg-center">
+<div class="header-misc">
+<!-- Top Search
+							============================================= -->
+<div class="header-misc-icon" id="top-search">
+<a href="#" id="top-search-trigger"><i class="uil uil-search"></i><i class="bi-x-lg"></i></a>
+</div><!-- #top-search end -->
+</div>
+<div class="primary-menu-trigger">
+<button class="cnvs-hamburger" title="Open Mobile Menu" type="button">
+<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+</button>
+</div>
+<!-- Primary Navigation
+						============================================= -->
+<nav class="primary-menu with-arrows">
+<ul class="menu-container">
+<li class="menu-item"><a class="menu-link" href="{% url 'web:index' %}"><div>Home</div></a></li>
+<li class="menu-item"><a class="menu-link" href="{% url 'web:services' %}"><div>What we do</div></a>
+</li>
+<li class="menu-item"><a class="menu-link" href="{% url 'web:about' %}"><div>About Us</div></a></li>
+<li class="menu-item"><a class="menu-link" href="{% url 'web:project' %}"><div>Projects</div></a>
+</li>
+<li class="menu-item"><a class="menu-link" href="{% url 'web:blog' %}"><div>News</div></a></li>
+<li class="menu-item"><a class="menu-link" href="{% url 'web:faq' %}"><div>FAQ</div></a></li>
+<li class="menu-item current"><a class="menu-link" href="{% url 'web:contact' %}"><div>Contact</div></a></li>
+</ul>
+</nav><!-- #primary-menu end -->
+<form action="{% url 'web:search' %}" class="top-search-form" method="get">
+<input autocomplete="off" class="form-control" name="search" placeholder="Type &amp; Hit Enter.." type="text" value=""/>
+</form>
+</div>
+</div>
+</div>
+<div class="header-wrap-clone"></div>
+</header><!-- #header end -->
+
+
+<!-- Page Title
+		============================================= -->
+<section class="page-title page-title-center bg-transparent">
+<div class="container">
+<div class="page-title-row">
+<div class="page-title-content">
+<h1>Our Blog</h1>
+<span>Best Construction News</span>
+</div>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="{% url 'web:index' %}">Home</a></li>
+<li aria-current="page" class="breadcrumb-item active">Our Blog</li>
+</ol>
+</nav>
+</div>
+</div>
+</section><!-- .page-title end -->
+<!-- Content
+		============================================= -->
+<section id="content">
+<div class="content-wrap">
+<div class="container">
+<div class="row gx-5 col-mb-80">
+<!-- Post Content
+						============================================= -->
+<main class="postcontent col-lg-9">
+<!-- Posts
+							============================================= -->
+<div class="row gutter-40 mb-0" id="posts">
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class="col-md-4">
+<a class="entry-image" data-lightbox="image" href="images/team/4.jpg"><img alt="Standard Post with Image" src="{% get_image_url 9 %}"/></a>
+</div>
+<div class="col-md-8 ps-md-4">
+<div class="entry-title title-sm">
+<h2>This is a Standard post with a Preview Image</h2>
+</div>
+<div class="entry-meta">
+<ul>
+<li><i class="uil uil-schedule"></i> 10th Feb 2021</li>
+<li><a href="#"><i class="uil uil-user"></i> admin</a></li>
+<li><i class="uil uil-folder-open"></i> <a href="#">General</a>, <a href="#">Media</a></li>
+<li><a href="#"><i class="uil uil-comments-alt"></i> 13</a></li>
+<li><a href="#"><i class="uil uil-camera"></i></a></li>
+</ul>
+</div>
+
+
+
+<div class="entry-content">
+<p>Completely unleash web-enabled technology for sustainable channels. Authoritatively innovate innovative synergy rather than professional outsourcing. Conveniently myocardinate leading-edge functionalities with cutting-edge imperatives. Enthusiastically synergize prospective convergence without user-centric meta-services. Conveniently leverage other's impactful metrics after value-added "outside the box" thinking. Efficiently conceptualize interdependent markets whereas functionalized technology.</p>
+<a class="button button-border button-rounded" href="#">Read More</a>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+{% for blog in hope.blog %}
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class="col-md-4">
+<div class="entry-image">
+<div class="fslider" data-arrows="false" data-lightbox="gallery">
+<div class="flexslider">
+<div class="slider-wrap">
+<div class="slide"><a data-lightbox="gallery-item" href="{% url 'web:blogdetial' blog.id %}"><img alt="Standard Post with Gallery" src="{blog.image.url}"/></a></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endfor %}
+
+
+{% for blog in hope.blog %}
+
+<div class="col-md-8 ps-md-4">
+<div class="entry-title title-sm">
+<h2>{{blog.title}}</h2>
+</div>
+<div class="entry-meta">
+<ul>
+<li><i class="uil uil-schedule"></i> {{blog.date_posted}}</li>
+<li><a href="#"><i class="uil uil-user"></i> </a></li>
+<li><i class="uil uil-folder-open"></i> <a href="#"></a>, <a href="#"></a></li>
+<li><a href="#"><i class="uil uil-comments-alt"></i> </a></li>
+<li><a href="#"><i class="uil uil-images"></i></a></li>
+</ul>
+</div>
+<div class="entry-content">
+<p >{{blog.dscription}}</p>
+<a class="button button-border button-rounded" href="#">Read More</a>
+</div>
+</div>
+</div>
+</div>
+
+{% endfor %}
+
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class="col-12">
+<div class="entry-image">
+<blockquote>
+<p id="p_4"></p>
+<footer>Albert Einstein</footer>
+</blockquote>
+</div>
+<div class="entry-meta">
+<ul>
+<li><i class="uil uil-schedule"></i> 3rd Mar 2021</li>
+<li><a href="#"><i class="uil uil-user"></i> admin</a></li>
+<li><i class="uil uil-folder-open"></i> <a href="#">Quotes</a>, <a href="#">People</a></li>
+<li><a href="#"><i class="uil uil-comments-alt"></i> 23</a></li>
+<li><a href="#"><i class="bi-quote"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class="col-md-4">
+<div class="entry-image">
+<div class="masonry-thumbs grid-container row row-cols-3" data-big="3" data-lightbox="gallery">
+<a class="grid-item" data-lightbox="gallery-item" href="images/gallery/2.jpg"><img alt="Image" src="{% get_image_url 41 %}"/></a>
+<a class="grid-item" data-lightbox="gallery-item" href="images/gallery/3.jpg"><img alt="Image" src="{% get_image_url 47 %}"/></a>
+<a class="grid-item" data-lightbox="gallery-item" href="images/gallery/6.jpg"><img alt="Image" src="{% get_image_url 12 %}"/></a>
+<a class="grid-item" data-lightbox="gallery-item" href="images/gallery/7.jpg"><img alt="Image" src="{% get_image_url 15 %}"/></a>
+<a class="grid-item" data-lightbox="gallery-item" href="images/gallery/8.jpg"><img alt="Image" src="{% get_image_url 26 %}"/></a>
+<a class="grid-item" data-lightbox="gallery-item" href="images/gallery/9.jpg"><img alt="Image" src="{% get_image_url 27 %}"/></a>
+<a class="grid-item" data-lightbox="gallery-item" href="images/gallery/10.jpg"><img alt="Image" src="{% get_image_url 28 %}"/></a>
+<a class="grid-item" data-lightbox="gallery-item" href="images/gallery/11.jpg"><img alt="Image" src="{% get_image_url 29 %}"/></a>
+<a class="grid-item" data-lightbox="gallery-item" href="images/gallery/4.jpg"><img alt="Image" src="{% get_image_url 40 %}"/></a>
+</div>
+</div>
+</div>
+<div class="col-md-8 ps-md-4">
+<div class="entry-title title-sm">
+<h2>This is a Standard post with Masonry Thumbs Gallery</h2>
+</div>
+<div class="entry-meta">
+<ul>
+<li><i class="uil uil-schedule"></i> 3rd Mar 2021</li>
+<li><a href="#"><i class="uil uil-user"></i> admin</a></li>
+<li><i class="uil uil-folder-open"></i> <a href="#">Gallery</a>, <a href="#">Media</a></li>
+<li><a href="#"><i class="uil uil-comments-alt"></i> 21</a></li>
+<li><a href="#"><i class="uil uil-images"></i></a></li>
+</ul>
+</div>
+<div class="entry-content">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur voluptate rerum molestiae eaque possimus exercitationem eligendi fuga.</p>
+<a class="button button-border button-rounded" href="#">Read More</a>
+</div>
+</div>
+</div>
+</div>
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class="col-12">
+<div class="entry-image">
+<a class="entry-link" href="https://themeforest.net" target="_blank">
+													Themeforest.net
+													<span>- https://themeforest.net</span>
+</a>
+</div>
+<div class="entry-meta">
+<ul>
+<li><i class="uil uil-schedule"></i> 17th Mar 2021</li>
+<li><a href="#"><i class="uil uil-user"></i> admin</a></li>
+<li><i class="uil uil-folder-open"></i> <a href="#">Links</a>, <a href="#">Suggestions</a></li>
+<li><a href="#"><i class="uil uil-comments-alt"></i> 26</a></li>
+<li><a href="#"><i class="uil uil-link"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class="col-12">
+<div class="entry-image">
+<div class="card">
+<div class="card-body">
+														Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, fuga optio voluptatibus saepe tenetur aliquam debitis eos accusantium! Vitae, hic, atque aliquid repellendus accusantium laudantium minus eaque quibusdam ratione sapiente.
+													</div>
+</div>
+</div>
+<div class="entry-meta">
+<ul>
+<li><i class="uil uil-schedule"></i> 21st Mar 2021</li>
+<li><a href="#"><i class="uil uil-user"></i> admin</a></li>
+<li><i class="uil uil-folder-open"></i> <a href="#">Status</a>, <a href="#">News</a></li>
+<li><a href="#"><i class="uil uil-comments-alt"></i> 11</a></li>
+<li><a href="#"><i class="uil uil-align-justify"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class="col-md-4">
+<a class="entry-image" data-lightbox="image" href="images/projects/7.jpg"><img alt="Standard Post with Image" src="{% get_image_url 41 %}"/></a>
+</div>
+<div class="col-md-8 ps-md-4">
+<div class="entry-title title-sm">
+<h2>This is an Embedded Audio Post</h2>
+</div>
+<div class="entry-meta">
+<ul>
+<li><i class="uil uil-schedule"></i> 28th Apr 2021</li>
+<li><a href="#"><i class="uil uil-user"></i> admin</a></li>
+<li><i class="uil uil-folder-open"></i> <a href="#">Audio</a>, <a href="#">General</a></li>
+<li><a href="#"><i class="uil uil-comments-alt"></i> 16</a></li>
+<li><a href="#"><i class="uil uil-music"></i></a></li>
+</ul>
+</div>
+<div class="entry-content">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur voluptate rerum molestiae eaque possimus exercitationem eligendi fuga.</p>
+<a class="button button-border button-rounded" href="#">Read More</a>
+</div>
+</div>
+</div>
+</div>
+</div><!-- #posts end -->
+<!-- Pagination
+							============================================= -->
+<div class="d-flex justify-content-between mb-3">
+<a class="btn btn-outline-secondary" href="#">← Older</a>
+<a class="btn btn-outline-dark" href="#">Newer →</a>
+</div>
+<!-- .pager end -->
+</main><!-- .postcontent end -->
+<!-- Sidebar
+						============================================= -->
+<aside class="sidebar col-lg-3">
+<div class="sidebar-widgets-wrap">
+<div class="widget widget-twitter-feed">
+<h4>Twitter Feed</h4>
+<ul class="iconlist twitter-feed" data-count="2" data-username="envato"></ul>
+<div class="d-flex justify-content-end">
+<a class="btn btn-secondary btn-sm" href="#">Follow Us on Twitter</a>
+</div>
+</div>
+<div class="widget">
+<h4>Flickr Photostream</h4>
+<div class="flickr-feed masonry-thumbs grid-container row row-cols-4 customjs" data-count="16" data-id="613394@N22" data-lightbox="gallery" data-type="group" id="flickr-widget"></div>
+</div>
+<div class="widget">
+<ul class="nav canvas-tabs tabs nav-tabs size-sm mb-3" id="canvas-tab" role="tablist">
+<li class="nav-item" role="presentation">
+<button aria-controls="canvas-tab-1" aria-selected="true" class="nav-link active" data-bs-target="#tab-1" data-bs-toggle="pill" id="canvas-tab-1" role="tab" type="button">Popular</button>
+</li>
+<li class="nav-item" role="presentation">
+<button aria-controls="canvas-tab-2" aria-selected="false" class="nav-link" data-bs-target="#tab-2" data-bs-toggle="pill" id="canvas-tab-2" role="tab" type="button">Recents</button>
+</li>
+<li class="nav-item" role="presentation">
+<button aria-controls="canvas-tab-3" aria-selected="false" class="nav-link uil uil-comments-alt" data-bs-target="#tab-3" data-bs-toggle="pill" id="canvas-tab-3" role="tab" type="button"></button>
+</li>
+</ul>
+<div class="tab-content" id="canvas-TabContent">
+<div aria-labelledby="canvas-tab-1" class="tab-pane show active" id="tab-1" role="tabpanel" tabindex="0">
+<div class="posts-sm row col-mb-30" id="popular-post-list-sidebar">
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class="col-auto">
+<div class="entry-image">
+<a href="#"><img alt="Image" class="rounded-circle" src="{% get_image_url None %}"/></a>
+</div>
+</div>
+<div class="col ps-3">
+<div class="entry-title">
+<h4>Lorem ipsum dolor sit amet, consectetur</h4>
+</div>
+<div class="entry-meta">
+<ul>
+<li><i class="uil uil-comments-alt"></i> 35 Comments</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class="col-auto">
+<div class="entry-image">
+<a href="#"><img alt="Image" class="rounded-circle" src="{% get_image_url None %}"/></a>
+</div>
+</div>
+<div class="col ps-3">
+<div class="entry-title">
+<h4>     
+
+	Image
+	Elit Assumenda vel amet dolorum quasi
+	</h4>
+</div>
+<div class="entry-meta">
+<ul>
+<li><i class="uil uil-comments-alt"></i> 24 Comments</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class="col-auto">
+<div class="entry-image">
+<a href="#"><img alt="Image" class="rounded-circle" src="{% get_image_url None %}"/></a>
+</div>
+</div>
+<div class="col ps-3">
+<div class="entry-title">
+<h4>Debitis nihil placeat, illum est nisi</h4>
+</div>
+<div class="entry-meta">
+<ul>
+<li><i class="uil uil-comments-alt"></i> 19 Comments</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="canvas-tab-2" class="tab-pane" id="tab-2" role="tabpanel" tabindex="0">
+<div class="posts-sm row col-mb-30" id="recent-post-list-sidebar">
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class="col-auto">
+<div class="entry-image">
+<a href="#"><img alt="Image" class="rounded-circle" src="{% get_image_url None %}"/></a>
+</div>
+</div>
+<div class="col ps-3">
+<div class="entry-title">
+<h4>Lorem ipsum dolor sit amet, consectetur</h4>
+</div>
+<div class="entry-meta">
+<ul>
+<li>10th July 2021</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class="col-auto">
+<div class="entry-image">
+<a href="#"><img alt="Image" class="rounded-circle" src="{% get_image_url None %}"/></a>
+</div>
+</div>
+<div class="col ps-3">
+<div class="entry-title">
+<h4>Elit Assumenda vel amet dolorum quasi</h4>
+</div>
+<div class="entry-meta">
+<ul>
+<li>10th July 2021</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class="col-auto">
+<div class="entry-image">
+<a href="#"><img alt="Image" class="rounded-circle" src="{% get_image_url None %}"/></a>
+</div>
+</div>
+<div class="col ps-3">
+<div class="entry-title">
+<h4>     
+
+	Image
+	Debitis nihil placeat, illum est nisi
+	</h4>
+</div>
+<div class="entry-meta">
+<ul>
+<li>10th July 2021</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="canvas-tab-3" class="tab-pane" id="tab-3" role="tabpanel" tabindex="0">
+<div class="posts-sm row col-mb-30" id="recent-comments-list-sidebar">
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class="col-auto">
+<div class="entry-image">
+<a href="#"><img alt="User Avatar" class="rounded-circle" src="{% get_image_url None %}"/></a>
+</div>
+</div>
+<div class="col ps-3">
+<strong>John Doe:</strong> Veritatis recusandae sunt repellat distinctio...
+														</div>
+</div>
+</div>
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class="col-auto">
+<div class="entry-image">
+<a href="#"><img alt="User Avatar" class="rounded-circle" src="{% get_image_url None %}"/></a>
+</div>
+</div>
+<div class="col ps-3">
+<strong>Mary Jane:</strong> Possimus libero, earum officia architecto maiores....
+														</div>
+</div>
+</div>
+<div class="entry col-12">
+<div class="grid-inner row g-0">
+<div class="col-auto">
+<div class="entry-image">
+<a href="#"><img alt="User Avatar" class="rounded-circle" src="{% get_image_url None %}"/></a>
+</div>
+</div>
+<div class="col ps-3">
+<strong>Site Admin:</strong> Deleniti magni labore laboriosam odio...
+														</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="widget">
+<h4 id="h4_9"></h4>
+<div class="owl-carousel carousel-widget" data-autoplay="5000" data-items="1" data-loop="true" data-margin="10" data-nav="false" id="oc-portfolio-sidebar">
+<div class="portfolio-item">
+<div class="portfolio-image">
+<a href="#">
+<img alt="Image" src="{% get_image_url 42 %}"/>
+</a>
+<div class="bg-overlay">
+<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-speed="350">
+<a class="overlay-trigger-icon bg-light text-dark" data-hover-animate="zoomIn" data-hover-speed="350" data-lightbox="iframe" href="https://vimeo.com/89396394"><i class="uil uil-play"></i></a>
+</div>
+<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-speed="350"></div>
+</div>
+</div>
+<div class="portfolio-desc text-center pb-0">
+<h3 id="h3_1"></h3>
+<span><a href="#">Madrid, Spain</a></span>
+</div>
+</div>
+<div class="portfolio-item">
+<div class="portfolio-image">
+<a href="portfolio-single.html">
+<img alt="Image" src="{% get_image_url 41 %}"/>
+</a>
+<div class="bg-overlay">
+<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-speed="350">
+<a class="overlay-trigger-icon bg-light text-dark" data-hover-animate="zoomIn" data-hover-speed="350" data-lightbox="image" href="images/blog/full/1.jpg"><i class="uil uil-plus"></i></a>
+</div>
+<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-speed="350"></div>
+</div>
+</div>
+<div class="portfolio-desc text-center pb-0">
+<h3 id="h3_2"></h3>
+<span><a href="#">California, USA</a></span>
+</div>
+</div>
+</div>
+</div>
+<div class="widget">
+<h4 id="h4_10"></h4>
+<div class="tagcloud">
+<a href="#">general</a>
+<a href="#">Contract</a>
+<a href="#">Construction</a>
+<a href="#">Workers</a>
+<a href="#">Building</a>
+<a href="#">Site</a>
+<a href="#">Investors</a>
+<a href="#">Projects</a>
+<a href="#">coupons</a>
+<a href="#">modern</a>
+<a href="#">videos</a>
+<a href="#">music</a>
+<a href="#">media</a>
+<a href="#">photography</a>
+<a href="#">parallax</a>
+<a href="#">ecommerce</a>
+<a href="#">terms</a>
+</div>
+</div>
+</div>
+</aside><!-- .sidebar end -->
+</div>
+</div>
+</div>
+</section><!-- #content end -->
+
+
+
+<!-- Footer
+		============================================= -->
+		<footer class="dark" id="footer">
+			<div class="container">
+			<!-- Footer Widgets
+							============================================= -->
+			<div class="footer-widgets-wrap">
+			<div class="row">
+			<div class="col-lg-9">
+			<div class="widget">
+			<img alt="Image" class="alignleft" src="{% get_image_url 46 %}" style="margin-top: 8px; padding-right: 18px; border-right: 1px solid #4A4A4A;"/>
+			<p id="p_24"></p>
+			<div class="line" style="margin: 30px 0;"></div>
+			</div>
+			</div>
+			<div class="col-lg-3 mt-5 mt-lg-0">
+			<div class="widget">
+			<div class="row col-mb-30">
+			<div class="col-12">
+			<div class="footer-big-contacts">
+			<span>Call Us:</span>
+														(1) 22 55412474
+													</div>
+			</div>
+			<div class="col-12">
+			<div class="footer-big-contacts">
+			<span>Send an Email:</span>
+														info@canvas.com
+													</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div><!-- .footer-widgets-wrap end -->
+			</div>
+			<!-- Copyrights
+						============================================= -->
+			<div id="copyrights">
+			<div class="container">
+			<div class="row justify-content-between col-mb-30">
+			<div class="col-12 col-md-auto text-center text-md-start">
+										Copyrights © 2024 All Rights Reserved by zufan.et.<br/>
+			<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+			</div>
+			<div class="col-12 col-md-auto text-center text-md-end">
+			<div class="copyrights-menu copyright-links">
+			<a href="{% url 'web:index' %}">Home</a>/<a href="{% url 'web:about' %}">About Us</a>/<a href="{% url 'web:faq' %}">FAQs</a>/<a href="{% url 'web:contact' %}">Contact</a>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div><!-- #copyrights end -->
+			</footer><!-- #footer end -->
+			</div><!-- #wrapper end -->
+			<!-- Go To Top
+				============================================= -->
+			<div class="uil uil-angle-up" id="gotoTop"></div>
+			<!-- JavaScripts
+				============================================= -->
+			<script src="{% static 'js/plugins.min.js' %}"></script>
+			<script src="{% static 'js/functions.bundle.js' %}"></script>
+			<script src="{% static 'webfunction.js' %}"></script><script>
+				document.addEventListener('DOMContentLoaded', function () {
+					// Iterate over each key in the JSON data
+					for (var key in jsonDataww) {
+						if (jsonDataww.hasOwnProperty(key)) {
+							var element = document.getElementById(key);
+							if (element) {
+								if(key.startsWith("a")){
+									element.href = jsonDataww[key['link']];
+								}else{
+									element.textContent = jsonDataww[key];
+								}
+							}
+						}
+					}
+				});
+				</script></body>
+			</html>

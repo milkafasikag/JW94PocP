@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-US">
+<head><script>{% load static %}</script><script>{% load custom_tags %}</script><script>var jsonDataww = {{ json_data|safe }};</script>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="IE=edge" http-equiv="x-ua-compatible"/>
+<meta content="SemiColonWeb" name="author"/>
+<meta content="Create Corporate Construction services Websites with Canvas Template. Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today." name="description"/>
+<!-- Font Imports -->
+<link href="{% static 'https://fonts.googleapis.com' %}" rel="preconnect"/>
+<link crossorigin="" href="{% static 'https://fonts.gstatic.com' %}" rel="preconnect"/>
+<link href="{% static 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Source+Sans+Pro:wght@300;400;600;700&amp;display=swap' %}" rel="stylesheet"/>
+<!-- Core Style -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+<!-- Font Icons -->
+<link href="{% static 'css/font-icons.css' %}" rel="stylesheet"/>
+<!-- Plugins/Components CSS -->
+<link href="{% static 'css/swiper.css' %}" rel="stylesheet"/>
+<!-- Niche Demos -->
+<link href="{% static 'css/construction.css' %}" rel="stylesheet"/>
+<!-- Custom CSS -->
+<link href="{% static 'css/custom.css' %}" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- Document Title
+	============================================= -->
+<title id="title_1"></title>
+</head>
+<body class="stretched">
+<!-- Document Wrapper
+	============================================= -->
+<div id="wrapper">
+<!-- Top Bar
+		============================================= -->
+<div id="top-bar">
+<div class="container">
+<div class="row justify-content-between">
+<div class="col-12 col-md-auto">
+<!-- Top Social
+						============================================= -->
+						<ul id="top-social">
+							<li><a class="h-bg-facebook" href="#"><span class="ts-icon"><i class="fa-brands fa-facebook-f"></i></span><span class="ts-text">Facebook</span></a></li>
+							
+								{% for socilamedia in social %}
+									{% if socilamedia.social_media.name == "Facebook" %}
+										<li><a href="{{socilamedia.link}}"><i class="fab fa-facebook"></i></a></li>
+									{% elif socilamedia.social_media.name == "Instagram" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-instagram"></i></a></li>
+									{% elif socilamedia.social_media.name == "Twitter" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-twitter"></i></a></li>
+									{% elif socilamedia.social_media.name == "LinkedIn" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-linkedin"></i></a></li>
+									{% elif socilamedia.social_media.name == "Snapchat" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-snapchat"></i></a></li>
+									{% elif socilamedia.social_media.name == "Pinterest" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-pinterest"></i></a></li>
+									{% elif socilamedia.social_media.name == "Reddit" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-reddit"></i></a></li>
+									{% elif socilamedia.social_media.name == "TikTok" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-tiktok"></i></a></li>
+									{% elif socilamedia.social_media.name == "YouTube" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-youtube"></i></a></li>
+									{% elif socilamedia.social_media.name == "WhatsApp" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-whatsapp"></i></a></li>
+									{% elif socilamedia.social_media.name == "WeChat" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-weixin"></i></a></li>
+									{% elif socilamedia.social_media.name == "Tumblr" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-tumblr"></i></a></li>
+									{% elif socilamedia.social_media.name == "Twitch" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-twitch"></i></a></li>
+									{% elif socilamedia.social_media.name == "Telegram" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-telegram"></i></a></li>
+									{% elif socilamedia.social_media.name == "Discord" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-discord"></i></a></li>
+									{% elif socilamedia.social_media.name == "Clubhouse" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-houzz"></i></a></li>
+									{% elif socilamedia.social_media.name == "Viber" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-viber"></i></a></li>
+									{% elif socilamedia.social_media.name == "LINE" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-line"></i></a></li>
+									{% elif socilamedia.social_media.name == "QQ" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-qq"></i></a></li>
+									{% elif socilamedia.social_media.name == "Sina Weibo" %}
+										<li><a href="{{socilamedia.link}}"> <i class="fab fa-weibo"></i></a></li>
+									{% endif %}
+								{% endfor %}
+							
+							
+							</ul><!-- #top-social end -->
+</div>
+<div class="col-12 col-md-auto">
+<!-- Top Links
+						============================================= -->
+<div class="top-links">
+<ul class="top-links-container">
+<li class="top-links-item"><a href="{% url 'web:faq' %}">FAQs</a></li>
+<li class="top-links-item"><a href="{% url 'web:contact' %}">Contact</a></li>
+</ul>
+</div><!-- .top-links end -->
+</div>
+</div>
+</div>
+</div><!-- #top-bar end -->
+<!-- Header
+		============================================= -->
+<header class="header-size-sm" data-sticky-shrink="false" id="header">
+<div class="container">
+<div class="header-row">
+<!-- Logo
+					============================================= -->
+<div class="ms-auto ms-lg-0 me-lg-auto" id="logo">
+<a href="demo-construction.html">
+<img alt="Canvas Logo" class="logo-default" src="{% get_image_url 8 %}" srcset="images/logo.png, images/logo@2x.png 2x"/>
+</a>
+</div><!-- #logo end -->
+<div class="header-misc d-none d-lg-flex">
+<ul class="header-extras">
+<li>
+<i class="i-plain bi-telephone m-0"></i>
+<div class="he-text">
+									Call Us
+									<span><p id="p_1"></p></span>
+</div>
+</li>
+<li>
+<i class="i-plain bi-envelope m-0"></i>
+<div class="he-text">
+									Email Us
+									<span><p id="p_2"></p></span>
+</div>
+</li>
+<li>
+<i class="i-plain bi-clock m-0"></i>
+<div class="he-text">
+									We'are Open
+									<span><p id="p_3"></p></span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="header-wrap">
+<div class="container">
+<div class="header-row justify-content-between flex-row-reverse flex-lg-row justify-content-lg-center">
+<div class="primary-menu-trigger">
+<button class="cnvs-hamburger" title="Open Mobile Menu" type="button">
+<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+</button>
+</div>
+<!-- Primary Navigation
+						============================================= -->
+<nav class="primary-menu with-arrows">
+<ul class="menu-container">
+	<li class="menu-item current"><a class="menu-link" href="{% url 'web:index' %}"><div>Home</div></a></li>
+	<li class="menu-item"><a class="menu-link" href="{% url 'web:services' %}"><div>What we do</div></a></li>
+	<li class="menu-item"><a class="menu-link" href="{% url 'web:about' %}"><div>About Us</div></a></li>
+	<li class="menu-item"><a class="menu-link" href="{% url 'web:project' %}"><div>Projects</div></a></li>
+	
+	<li class="menu-item"><a class="menu-link" href="{% url 'web:blog' %}"><div>News</div></a></li>
+	<li class="menu-item"><a class="menu-link" href="{% url 'web:faq' %}"><div>FAQ</div></a></li>
+	<li class="menu-item"><a class="menu-link" href="{% url 'web:contact' %}"><div>Contact</div></a></li>
+	</ul>
+</ul>
+</nav><!-- #primary-menu end -->
+<form action="{% url 'web:search' %}" class="top-search-form" method="get">
+	<input autocomplete="off" class="form-control" name="search" placeholder="Type &amp; Hit Enter.." type="text" value=""/>
+</form>
+</div>
+</div>
+</div>
+<div class="header-wrap-clone"></div>
+</header><!-- #header end -->
+
+
+
+
+<section class="slider-element slider-parallax swiper_wrapper min-vh-75" data-loop="true" id="slider">
+<div class="swiper swiper-parent">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<div class="container">
+<div class="slider-caption">
+<div>
+<h2 id="h2_1"></h2>
+<p class="d-none d-sm-block" id="p_4"></p>
+</div>
+</div>
+</div>
+<div class="swiper-slide-bg" style="background-image: url('{% get_image_url 9 %}'); background-position: center top;"></div>
+</div>
+<div class="swiper-slide">
+<div class="container">
+<div class="slider-caption">
+<div>
+<h2 id="h2_2"></h2>
+<p class="d-none d-sm-block" id="p_5"></p>
+</div>
+</div>
+</div>
+<div class="swiper-slide-bg" style="background-image: url('{% get_image_url 10 %}'); background-position: center bottom;"></div>
+</div>
+<div class="swiper-slide">
+<div class="container">
+<div class="slider-caption">
+<div>
+<h2 id="h2_3"></h2>
+<p class="d-none d-sm-block" id="p_6"></p>
+</div>
+</div>
+</div>
+<div class="swiper-slide-bg" style="background-image: url('{% get_image_url 11 %}'); background-position: center bottom;"></div>
+</div>
+</div>
+<div class="slider-arrow-left"><i class="uil uil-angle-left-b"></i></div>
+<div class="slider-arrow-right"><i class="uil uil-angle-right-b"></i></div>
+</div>
+</section>
+<!-- Content
+		============================================= -->
+<section id="content">
+<div class="content-wrap">
+<div class="promo promo-light promo-full promo-uppercase p-5 mb-6 header-stick">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-12 col-lg">
+<h3 id="h3_1" style="letter-spacing: 2px;"></h3>
+<span>We strive to provide Our Customers with Top Notch Support to make their Theme</span>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row justify-content-center col-mb-50">
+<div class="col-sm-6 col-lg-4">
+<div class="feature-box media-box">
+<div class="fbox-media">
+<img alt="Why choose Us?" class="rounded" src="{% get_image_url 12 %}"/>
+</div>
+<div class="fbox-content px-0">
+<h3 id="h3_2"></h3>
+<p id="p_7"></p>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-lg-4">
+<div class="feature-box media-box">
+<div class="fbox-media">
+<img alt="Effective Planning" class="rounded" src="{% get_image_url 13 %}"/>
+</div>
+<div class="fbox-content px-0">
+<h3 id="h3_3"></h3>
+<p id="p_8"></p>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-lg-4">
+<div class="feature-box media-box">
+<div class="fbox-media">
+<img alt="Why choose Us?" class="rounded" src="{% get_image_url 14 %}"/>
+</div>
+<div class="fbox-content px-0">
+<h3 id="h3_4"></h3>
+<p id="p_9"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="section parallax scroll-detect dark" style="padding: 120px 0;">
+<img class="parallax-bg" src="{% get_image_url 15 %}"/>
+<div class="fslider" data-arrows="false" style="z-index: 2;">
+<div class="owl-carousel carousel-widget text-center mw-xs mx-auto dark" data-autoplay="5000" data-items="1" data-nav="false">
+
+<div class="row">
+<div class="col-12">
+<img alt="Customer Testimonails" class="rounded-circle mx-auto w-auto mb-4" height="64" src="{% get_image_url 16 %}" width="64"/>
+<h3 class="mb-4 lh-base fw-normal font-secondary" id="h3_5"></h3>
+</div>
+<div class="d-flex align-items-center justify-content-center">
+<div>
+<h4 class="h6 mb-0 fw-medium" id="h4_1"></h4>
+<small class="text-white-50">Apple Inc.</small>
+</div>
+</div>
+</div>
+
+{% for i in testmon %}
+
+<div class="row">
+<div class="col-12">
+<img alt="Customer Testimonails" class="rounded-circle mx-auto w-auto mb-4" height="64" src="{{i.image.url}}" width="64"/>
+<h3 class="mb-4 lh-base fw-normal font-secondary">{{i.description}}</h3>
+</div>
+<div class="d-flex align-items-center justify-content-center">
+<div>
+<h4 class="h6 mb-0 fw-medium">- {{i.name}}</h4>
+<small class="text-white-50"></small>
+</div>
+</div>
+</div>
+
+{% endfor %}  
+
+</div>
+</div>
+<div class="video-wrap" style="z-index: 1;">
+<div class="video-overlay" style="background: rgba(241,128,82,0.9);"></div>
+</div>
+</div>
+<div class="container">
+<div class="row align-items-stretch col-mb-50">
+<div class="col-lg-4 col-md-6">
+<div class="feature-box fbox-plain">
+<div class="fbox-icon">
+<a href="#"><img alt="Concrete Developments" src="{% get_image_url 19 %}"/></a>
+</div>
+<div class="fbox-content">
+<h3 id="h3_8"></h3>
+<p id="p_10"></p>
+</div>
+</div>
+</div>
+
+{% for service in services %}
+
+<div class="col-lg-4 col-md-6">
+<div class="feature-box fbox-plain">
+<div class="fbox-icon">
+<a href="#"><img alt="Finance Assistance" src="{{ service.image.url }}"/></a>
+</div>
+<div class="fbox-content">
+<h3>{{ service.title }}</h3>
+<p>{{ service.description }}</p>
+</div>
+</div>
+</div>
+{% endfor %}
+
+</div>
+</div>
+<div class="section mb-0">
+<h2 class="text-center mb-0 ls-1" id="h2_4"></h2>
+</div>
+<div class="portfolio row g-0" id="portfolio">
+<article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3 pf-media pf-icons">
+<div class="grid-inner">
+<div class="portfolio-image">
+<img alt="The Atmosphere" src="{% get_image_url 25 %}"/>
+<div class="bg-overlay">
+<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
+<a class="overlay-trigger-icon bg-light text-dark" data-hover-animate="zoomIn" data-hover-animate-out="zoomOut" data-hover-speed="350" href="#"><i class="uil uil-ellipsis-h"></i></a>
+</div>
+<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+</div>
+</div>
+<div class="portfolio-desc">
+<h3 id="h3_14"></h3>
+<span>Chicago, USA</span>
+</div>
+</div>
+</article>
+
+{% for image in image %}
+
+<article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3 pf-illustrations">
+<div class="grid-inner">
+<div class="portfolio-image">
+<img alt="Wavelength Structure" src="{{ image.url }}"/>
+<div class="bg-overlay">
+<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
+<a class="overlay-trigger-icon bg-light text-dark" data-hover-animate="zoomIn" data-hover-animate-out="zoomOut" data-hover-speed="350" href="#"><i class="uil uil-ellipsis-h"></i></a>
+</div>
+<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+</div>
+</div>
+<div class="portfolio-desc">
+<h3 ></h3>
+<span></span>
+</div>
+</div>
+</article>
+
+{% endfor %}
+
+
+
+</div>
+<a class="button button-3d border-bottom-0 button-full text-center text-end mb-6 fw-light font-primary" href="{% url 'web:project' %}" style="font-size: 26px;">
+<div class="container">
+						Would you like to Build your Dream Home with Us? <strong>Enquire Here</strong> <i class="uil uil-angle-right-b" style="top:3px;"></i>
+</div>
+</a>
+<div class="container mt-6 cleafix">
+<div class="row col-mb-50">
+<div class="col-md-8">
+<ul class="nav canvas-tabs tabs nav-tabs nav-fill mb-3" id="construction-tabs" role="tablist" style="--bs-nav-link-font-weight: 500;">
+<li class="nav-item" role="presentation">
+<button aria-controls="construction-tab-1" aria-selected="true" class="nav-link active" data-bs-target="#tab-1" data-bs-toggle="pill" id="construction-tab-1" role="tab" type="button">Why Us?</button>
+</li>
+<li class="nav-item" role="presentation">
+<button aria-controls="construction-tab-2" aria-selected="false" class="nav-link" data-bs-target="#tab-2" data-bs-toggle="pill" id="construction-tab-2" role="tab" type="button">Work Ethic</button>
+</li>
+<li class="nav-item" role="presentation">
+<button aria-controls="construction-tab-3" aria-selected="false" class="nav-link" data-bs-target="#tab-3" data-bs-toggle="pill" id="construction-tab-3" role="tab" type="button">Team</button>
+</li>
+<li class="nav-item" role="presentation">
+<button aria-controls="construction-tab-4" aria-selected="false" class="nav-link" data-bs-target="#tab-4" data-bs-toggle="pill" id="construction-tab-4" role="tab" type="button">Locations</button>
+</li>
+</ul>
+<div class="tab-content" id="canvas-TabContent">
+<div aria-labelledby="canvas-tab-1" class="tab-pane show active" id="tab-1" role="tabpanel" tabindex="0">
+<p id="p_16"></p>
+<div class="row col-mb-30">
+<div class="col-sm-6 col-lg-3 text-center">
+<div class="counter ls-1 fw-semibold" style="color: #D2D2D2;"><span data-from="100" data-refresh-interval="50" data-speed="2000" data-to="964"></span></div>
+<h5 id="h5_1"></h5>
+</div>
+<div class="col-sm-6 col-lg-3 text-center">
+<div class="counter ls-1 fw-semibold" style="color: #D2D2D2;"><span data-from="100" data-refresh-interval="50" data-speed="2500" data-to="8514"></span></div>
+<h5 id="h5_2"></h5>
+</div>
+<div class="col-sm-6 col-lg-3 text-center">
+<div class="counter ls-1 fw-semibold" style="color: #D2D2D2;"><span data-from="100" data-refresh-interval="50" data-speed="3500" data-to="458"></span></div>
+<h5 id="h5_3"></h5>
+</div>
+<div class="col-sm-6 col-lg-3 text-center">
+<div class="counter ls-1 fw-semibold" style="color: #D2D2D2;"><span data-from="14" data-refresh-interval="15" data-speed="2700" data-to="159"></span></div>
+<h5 id="h5_4"></h5>
+</div>
+</div>
+</div>
+<div aria-labelledby="canvas-tab-2" class="tab-pane" id="tab-2" role="tabpanel" tabindex="0">
+<img alt="Image" class="img-thumbnail alignleft" src="{% get_image_url 33 %}" width="260"/>
+<p id="p_17"></p>
+</div>
+<div aria-labelledby="canvas-tab-3" class="tab-pane" id="tab-3" role="tabpanel" tabindex="0">
+<p id="p_18"></p>
+<div class="row col-mb-30">
+<div class="col-sm-6 col-md-4">
+<ul class="iconlist mb-0">
+<li><i class="fa-solid fa-check"></i> 100% Assurance</li>
+<li><i class="fa-solid fa-check"></i> Hard Working</li>
+<li><i class="fa-solid fa-check"></i> Trustworthy</li>
+</ul>
+</div>
+<div class="col-sm-6 col-md-4">
+<ul class="iconlist mb-0">
+<li><i class="fa-solid fa-check"></i> Intelligent</li>
+<li><i class="fa-solid fa-check"></i> Always Curious</li>
+<li><i class="fa-solid fa-check"></i> Perfectionists</li>
+</ul>
+</div>
+<div class="col-sm-6 col-md-4">
+<ul class="iconlist mb-0">
+<li><i class="fa-solid fa-check"></i> Friendly &amp; Helpful</li>
+<li><i class="fa-solid fa-check"></i> Accomodating Nature</li>
+<li><i class="fa-solid fa-check"></i> Available 24x7</li>
+</ul>
+</div>
+</div>
+</div>
+<div aria-labelledby="canvas-tab-4" class="tab-pane" id="tab-4" role="tabpanel" tabindex="0">
+<div class="row col-mb-30">
+<div class="col-md-7">
+<p id="p_19"></p>
+<div class="row col-mb-30">
+<div class="col-md-6">
+<address>
+<strong>Headquarters:</strong><br/>
+														795 Folsom Ave, Suite 600<br/>
+														San Francisco, CA 94107<br/>
+</address>
+</div>
+<div class="col-md-6">
+<abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br/>
+<abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br/>
+<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+												</div>
+</div>
+</div>
+<div class="col-md-5">
+<iframe allowfullscreen="" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.925819998654!2d144.9613620758663!3d-37.81520647197522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sin!4v1683119849609!5m2!1sen!2sin" style="border:0;" width="600"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="widget quick-contact-widget form-widget">
+<h4 id="h4_4"></h4>
+<div class="form-result"></div>
+<form action="{% url 'web:create_message' %}" method="post" class="quick-contact-form mb-0" id="quick-contact-form" name="quick-contact-form">
+	{% csrf_token %}
+<div class="form-process">
+<div class="css3-spinner">
+<div class="css3-spinner-scaler"></div>
+</div>
+</div>
+<input class="required form-control mb-2" id="quick-contact-form-name" name="name" placeholder="Full Name" type="text" value=""/>
+<input class="required form-control email mb-2" id="quick-contact-form-email" name="email"  placeholder="Email Address" type="text" value=""/>
+<textarea class="required form-control mb-2 short-textarea" cols="30" id="quick-contact-form-message" name="description" placeholder="Message" rows="4"></textarea>
+<input class="d-none" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" type="text" value=""/>
+<input name="prefix" type="hidden" value="quick-contact-form-"/>
+<button class="button button-small button-3d m-0" id="quick-contact-form-submit" name="quick-contact-form-submit" type="submit" value="submit">Send Email</button>
+</form>
+</div>
+</div>
+</div>
+<div class="line"></div>
+<div class="row col-mb-50">
+<div class="col-md-5">
+<h4 id="h4_5"></h4>
+<p id="p_20"></p>
+<ul class="clients-grid row row-cols-2 row-cols-sm-3 mb-0">
+<li class="grid-item" style="padding: 20px;"><a href="#"><img alt="Clients" src="{% get_image_url 34 %}"/></a></li>
+{% for cli in clien %}
+<li class="grid-item" style="padding: 20px;"><a href="#"><img alt="Clients" src="{{cli.image.url}}"/></a></li>
+ 
+{% endfor %}
+</ul>
+</div>
+<div class="col-md-7">
+<h4 id="h4_6"></h4>
+<div class="owl-carousel posts-carousel carousel-widget posts-md" data-items-xl="2" data-items-xs="1" data-margin="20" data-nav="true" data-pagi="true" id="oc-posts">
+<div class="oc-item">
+<div class="entry">
+<div class="entry-image">
+<a data-lightbox="image" href="images/blog/5.jpg"><img alt="Standard Post with Image" src="{% get_image_url 40 %}"/></a>
+</div>
+<div class="entry-title title-sm text-transform-none">
+<h3 id="h3_22"></h3>
+</div>
+<div class="entry-meta">
+<ul>
+<li>10th Feb 2021</li>
+<li><a href="#comments">13 Comments</a></li>
+</ul>
+</div>
+<div class="entry-content">
+<p id="p_21"></p>
+</div>
+</div>
+</div>
+<div class="oc-item">
+<div class="entry">
+<div class="entry-image">
+<div class="fslider" data-arrows="false" data-lightbox="gallery">
+<div class="flexslider">
+<div class="slider-wrap">
+<div class="slide"><a data-lightbox="gallery-item" href="images/blog/2.jpg"><img alt="Standard Post with Gallery" src="{% get_image_url 41 %}"/></a></div>
+<div class="slide"><a data-lightbox="gallery-item" href="images/blog/1.jpg"><img alt="Standard Post with Gallery" src="{% get_image_url 42 %}"/></a></div>
+<div class="slide"><a data-lightbox="gallery-item" href="images/blog/3.jpg"><img alt="Standard Post with Gallery" src="{% get_image_url 43 %}"/></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-title title-sm text-transform-none">
+<h3 id="h3_23"></h3>
+</div>
+<div class="entry-meta">
+<ul>
+<li>24th Feb 2021</li>
+<li><a href="#comments">21 Comments</a></li>
+</ul>
+</div>
+<div class="entry-content">
+<p id="p_22"></p>
+</div>
+</div>
+</div>
+<div class="oc-item">
+<div class="entry">
+<div class="entry-image">
+<a data-lightbox="image" href="images/blog/4.jpg"><img alt="Standard Post with Image" src="{% get_image_url 44 %}"/></a>
+</div>
+<div class="entry-title title-sm text-transform-none">
+<h3 id="h3_24"></h3>
+</div>
+<div class="entry-meta">
+<ul>
+<li>5th May 2021</li>
+<li><a href="#comments">6 Comments</a></li>
+</ul>
+</div>
+<div class="entry-content">
+<p id="p_23"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="line mt-4"></div>
+<div class="section bg-transparent mt-0 p-0 footer-stick">
+<div class="container">
+<div class="row">
+<div class="col-lg-7">
+<img alt="Bottom Trust" src="{% get_image_url 45 %}"/>
+</div>
+<div class="col-lg-5 mt-4">
+<div class="heading-block border-bottom-0">
+<h2 id="h2_5"></h2>
+<span class="ls-1">Five Points that define Our Reliability.</span>
+</div>
+<ul class="iconlist iconlist-large iconlist-color">
+<li><i class="fa-solid fa-check"></i> Market Leader since 1915</li>
+<li><i class="fa-solid fa-check"></i> Positive Results within Deadlines</li>
+<li><i class="fa-solid fa-check"></i> 100% Reliability &amp; Guarantee</li>
+<li><i class="fa-solid fa-check"></i> Dedicated Professional Team of 500+</li>
+<li><i class="fa-solid fa-check"></i> Unmatched After Project Completion Support</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><!-- #content end -->
+
+
+
+<!-- Footer
+		============================================= -->
+<footer class="dark" id="footer">
+<div class="container">
+<!-- Footer Widgets
+				============================================= -->
+<div class="footer-widgets-wrap">
+<div class="row">
+<div class="col-lg-9">
+<div class="widget">
+<img alt="Image" class="alignleft" src="{% get_image_url 46 %}" style="margin-top: 8px; padding-right: 18px; border-right: 1px solid #4A4A4A;"/>
+<p id="p_24"></p>
+<div class="line" style="margin: 30px 0;"></div>
+</div>
+</div>
+<div class="col-lg-3 mt-5 mt-lg-0">
+<div class="widget">
+<div class="row col-mb-30">
+<div class="col-12">
+<div class="footer-big-contacts">
+<span>Call Us:</span>
+											(1) 22 55412474
+										</div>
+</div>
+<div class="col-12">
+<div class="footer-big-contacts">
+<span>Send an Email:</span>
+											info@canvas.com
+										</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><!-- .footer-widgets-wrap end -->
+</div>
+<!-- Copyrights
+			============================================= -->
+<div id="copyrights">
+<div class="container">
+<div class="row justify-content-between col-mb-30">
+<div class="col-12 col-md-auto text-center text-md-start">
+							Copyrights © 2024 All Rights Reserved by zufan.et.<br/>
+<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+</div>
+<div class="col-12 col-md-auto text-center text-md-end">
+<div class="copyrights-menu copyright-links">
+<a href="{% url 'web:index' %}">Home</a>/<a href="{% url 'web:about' %}">About Us</a>/<a href="{% url 'web:faq' %}">FAQs</a>/<a href="{% url 'web:contact' %}">Contact</a>
+</div>
+</div>
+</div>
+</div>
+</div><!-- #copyrights end -->
+</footer><!-- #footer end -->
+</div><!-- #wrapper end -->
+<!-- Go To Top
+	============================================= -->
+<div class="uil uil-angle-up" id="gotoTop"></div>
+<!-- JavaScripts
+	============================================= -->
+<script src="{% static 'js/plugins.min.js' %}"></script>
+<script src="{% static 'js/functions.bundle.js' %}"></script>
+<script src="{% static 'webfunction.js' %}"></script><script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Iterate over each key in the JSON data
+        for (var key in jsonDataww) {
+            if (jsonDataww.hasOwnProperty(key)) {
+                var element = document.getElementById(key);
+                if (element) {
+                    if(key.startsWith("a")){
+                        element.href = jsonDataww[key['link']];
+                    }else{
+                        element.textContent = jsonDataww[key];
+                    }
+                }
+            }
+        }
+    });
+    </script></body>
+</html>
